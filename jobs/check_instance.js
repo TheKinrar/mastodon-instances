@@ -51,6 +51,11 @@ async function checkInstance(options) {
         instance.connections = instanceInfo.stats.domain_count || 0;
     }
 
+    instance.email = instanceInfo.email;
+    if(instanceInfo.contact_account) {
+        instance.admin = instanceInfo.contact_account.username;
+    }
+
     instance.thumbnail = instanceInfo.thumbnail;
     instance.raw_version = instanceInfo.version;
     instance.version = (instanceInfo.version || '').substr(0, 7);

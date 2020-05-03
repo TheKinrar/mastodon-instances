@@ -47,6 +47,9 @@ const Instance = sequelize.define('instance', {
 
     open_registrations: Sequelize.DataTypes.BOOLEAN,
 
+    email: Sequelize.DataTypes.TEXT,
+    admin: Sequelize.DataTypes.TEXT,
+
     software: {
         type: Sequelize.DataTypes.INTEGER,
 
